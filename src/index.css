@@ -1,0 +1,14 @@
+
+.card-highlight {
+    min-height : 100%;
+}
+
+.course-Card {
+    margin : 0.8rem;
+    padding : 0.2rem;
+}
+
+.course-Button {
+    margin: 15px 32px;
+    width: 200px;
+}
