@@ -25,6 +25,7 @@ React.createElement('h1', null, 'hello world') =  depricated version of the rend
 
 import AppNavbar from './components/AppNavbar'
 import Home from './pages/Home'
+import Courses from './pages/Courses'
 import './index.css'
 
 /* 
@@ -36,7 +37,9 @@ import './index.css'
 ReactDOM.render(
   <Fragment>
     <AppNavbar />
-    <Home />
+  {/* <Home /> 
+   */}
+    <Courses />
   </Fragment>
 , document.getElementById('root'));
 // ReactDOM.render(<Banner />, document.getElementById('root'));
