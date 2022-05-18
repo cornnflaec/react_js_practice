@@ -28,7 +28,7 @@ export default function CourseCard (props) { // props function
        
     */
     const [count, setCount] = useState(0)
-    const maxCount = 30
+    const maxCount = 10
 
     function enroll(){
         if(count < maxCount) {
