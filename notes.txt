@@ -1,0 +1,70 @@
+What is React JS 
+
+It is a js library for building user interfaces
+> declarative, it makes you wirte code with the question of what instead of how something is to be done. it also allows your code to be fmore predictable and easier to debug
+> Component - based - allows you to write reusable, complex ui components ina quickl and efficient manner
+> learn once, write anywhere : react can also be used on the server using node and power mobile apps using react nativ
+
+
+What problem does it solve?
+
+applications that require frequent and rapid changes in page data are resource intensive and complicated to code.
+
+separate concerns into components rather than technologies instead of the conventional HTML for structure, css for styling, and JS for interactivity
+
+Apply lrapid updates using virtual DOM. This only works on th differences between the current DOM state and the target DOM state.
+
+Store information in a component using states
+
+fb, insta, netflix 
+
+===============================
+
+Setting up react.js
+
+npx create-react-app (react-booking)
+npx create-react-app fileName
+
+npm start 
+
+
+install bootstrap
+npm install bootstrap@4.6.0 react-bootstrap@1.5.2
+
+
+
+create a courseCard component that will display  showing a particular course with the name, description and price inside a react-bootstrap courseCard
+courese name should be in the card title
+the description and price should be in the card body
+
+render the course card component in the homepage
+
+create a git reposuitory named s45-50
+
+
+add activity code - s45
+
+open file
+code -r (directoy)
+
+s45 activity
+Activity:
+1. Create a CourseCard component showing a particular course with the name, description and price inside a React-Bootstrap Card:
+- The course name should be in the card title.
+- The description and price should be in the card body.
+2. Render the CourseCard component in the Home page.
+3. Create a git repository named S45.
+4. Initialize a local git repository, add the remote link and push to git with the commit message of Add activity code - S45.
+5. Add the link in Boodle.
+
+s46 activity
+ctivity:
+1. Create a seats state in the CourseCard component and set the initial value to 10.
+2. For every enrollment, deduct one to the seats.
+3. If the seats reaches zero do the following:
+- Do not add to the count.
+- Do not deduct to the seats.
+Show an alert that says No more seats available.
+4. Update the git repository S45-50.
+5. Add another the remote link and push to git with the commit message of Add activity code - S46.
+6. Add the link in Boodle. 

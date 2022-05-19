@@ -28,13 +28,13 @@ export default function CourseCard (props) { // props function
        
     */
     const [count, setCount] = useState(0)
-    const maxCount = 10
+    const maxCount = 30
 
     function enroll(){
         if(count < maxCount) {
             setCount (count + 1)
        } else {
-          alert("Max Seat Number Reached");
+          alert("No More Seats");
        }
     }
         //setCount (count + 1)
