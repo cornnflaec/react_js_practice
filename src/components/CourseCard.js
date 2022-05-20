@@ -1,5 +1,5 @@
 // dependencies
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 
 // Bootstrap Components
 import Card from 'react-bootstrap/Card'
@@ -30,26 +30,49 @@ export default function CourseCard (props) {
 
     */
 
-    const [count, setCount] = useState(0)
-    const maxCount = 30
+    // const [count, setCount] = useState(0)
+    // const maxCount = 30
 
+    // function enroll(){
+    //     if(count < maxCount) {
+    //         setCount (count + 1)
+    //    } else {
+    //       alert("No More Seats");
+    //    }
+    // }
+        //setCount (count + 1)
+
+    const [isDisabled, setIsDisabled] = useState(0)
+    const [seats, setSeats] = useState(30)
+
+    useEffect (() => {
+        if (seats === 0){
+            setIsDisabled(true)
+        }
+    },[seats])
+        
+
+    // alternative 
+   /*  
+  
     function enroll(){
-        if(count < maxCount) {
-            setCount (count + 1)
+        if(seats === 0) {
+            alert("No More Seats")
        } else {
-          alert("No More Seats");
+          setCount(count +_1)
+          setSeats(seats -1)
        }
     }
-        //setCount (count + 1)
-    
+ */
     return (
         <Row>
            
             <Container fluid>
 
-                    <Card className = "course-Card">
+                <Card className = "course-Card">
+                    
 
-                        <Card.Body>
+                    <Card.Body>
 
                             <Card.Title>
                                 <h2>{course.name}</h2>
@@ -63,14 +86,15 @@ export default function CourseCard (props) {
                             <Card.Text>
                                 <h6>Price :</h6>
                                 <p>{course.price}</p>
-                                <h6>Enrollees</h6>
-                                <p>{count} Enrollees</p>
-                            </Card.Text> 
-
+                                <h6>Seats</h6>
+                                <p>{seats} Remaining</p>
+                            </Card.Text>
+    
                         </Card.Body>
-                        <Button className='course-Button' variant="primary" onClick={enroll}>Enroll Now</Button>
 
-                    </Card>
+                    <Button className='course-Button' variant="primary" onClick={() => setSeats(seats - 1)} disabled={isDisabled}>Enroll Now</Button>
+
+                </Card>
 
             </Container>
 
